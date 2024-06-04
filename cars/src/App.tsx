@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <body>
+      <header>
+        <div className="header-container">
+          <div className="links">
+            <a href="#">Main page</a>
+            <a href="#">My NFC</a>
+          </div>
+          <div>
+            <button>
+              <a href="#">Connect</a>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div className="content">
+          <img src="" alt="car1" />
+          <img src="" alt="car2" />
+          <img src="" alt="car3" />
+          <img src="" alt="car4" />
+          <img src="" alt="car5" />
+          <img src="" alt="car6" />
+          <img src="" alt="car7" />
+          <img src="" alt="car8" />
+        </div>
+      </main>
+      <footer></footer>
+    </body>
+  );
 }
 
-export default App
+export default App;
