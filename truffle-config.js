@@ -44,8 +44,7 @@
 // require('dotenv').config();
 // const { MNEMONIC, PROJECT_ID } = process.env;
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
-
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -64,11 +63,16 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-    // development: {
-    //  host: "127.0.0.1",     // Localhost (default: none)
+    development: {
+    //  provider: "https://hardhat.beeholder.net/1337",
+    // host: "hardhat.beeholder.net",
     //  port: 8545,            // Standard Ethereum port (default: none)
-    //  network_id: "*",       // Any network (default: none)
-    // },
+     network_id: "*",       // Any network (default: none)
+     provider: () => new HDWalletProvider(
+      ["0xc61d494a8d109dbe87e464258e8529f6e4a0887d84a167556b66cb476e419053"], 
+      `https://hardhat.beeholder.net`
+      ),
+    },
     //
     // An additional network, but with some advanced options…
     // advanced: {
