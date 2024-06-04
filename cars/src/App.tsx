@@ -3,9 +3,17 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
+function Card({ imagePath }: { imagePath: string }) {
+  return (
+    <div className="card">
+      <img src={imagePath} alt="car" className="image" />
+    </div>
+  );
+}
+
 function App() {
   const [count, setCount] = useState(0);
-
+  let image1 = "./src/assets/image2.png";
   return (
     <body>
       <header>
@@ -23,14 +31,13 @@ function App() {
       </header>
       <main>
         <div className="content">
-          <img src="" alt="car1" />
-          <img src="" alt="car2" />
-          <img src="" alt="car3" />
-          <img src="" alt="car4" />
-          <img src="" alt="car5" />
-          <img src="" alt="car6" />
-          <img src="" alt="car7" />
-          <img src="" alt="car8" />
+          <Card imagePath={image1} />
+          <Card imagePath={image1} />
+          <Card imagePath={image1} />
+          <Card imagePath={image1} />
+          <Card imagePath={image1} />
+          <Card imagePath={image1} />
+          <Card imagePath={image1} />
         </div>
       </main>
       <footer></footer>
